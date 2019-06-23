@@ -1,7 +1,7 @@
 .container {
-  max-width: 210px;
+  max-width: 200px;
   max-height: 350px;
-  width: 100%;
+  width: 21.3%;
   display: inline-block;
   padding-left: 1rem;
   padding-right: 1rem;
@@ -13,7 +13,7 @@
   display: block;
   background: #e3e3e3; /** <-- For the demo **/
   width: 100%;
-  height: 260px;
+  height: 240px;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -34,12 +34,20 @@
   }
 }
 
-@media only screen and (max-width: 1030px) {
+@media only screen and (max-width: 1050px) {
+  .container {
+    width: 20.5%;
+  }
+  .imageContainer {
+    height: 190px;
+  }
+}
+@media only screen and (max-width: 1010px) {
   .container {
     width: 20%;
   }
   .imageContainer {
-    height: 190px;
+    height: 170px;
   }
 }
 

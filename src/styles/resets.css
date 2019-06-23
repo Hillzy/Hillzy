@@ -127,10 +127,12 @@ select {
   vertical-align: middle;
 }
 
+.productsList {
+}
+
 .productsContainer {
   display: grid;
   grid-template-columns: 300px auto;
-  text-align: center;
 }
 
 .productFilter {

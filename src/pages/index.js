@@ -11,7 +11,9 @@ class IndexPage extends React.Component {
       <Layout location={this.props.location}>
         <div className="productsContainer">
           <div className="productFilter"></div>
-          <Products></Products>
+          <div className="productsList">
+            <Products></Products>
+          </div>
         </div>
       </Layout>
     )
