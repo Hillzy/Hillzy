@@ -1,5 +1,5 @@
 import React from "react"
-import ProductCard from "./productcard"
+import ProductCard from "./ProductCard"
 
 const Products = props => {
   const products = [
