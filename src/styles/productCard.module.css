@@ -1,0 +1,41 @@
+.container {
+  max-width: 200px;
+  max-height: 350px;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  margin: 15px 15px;
+}
+
+.imageContainer {
+  background: #e3e3e3; /** <-- For the demo **/
+  width: 100%;
+  height: 260px;
+}
+
+.textContainer {
+  margin-top: 13px;
+  line-height: 1.2;
+  font-family: "Raleway", sans-serif;
+}
+
+.brandText {
+  font-size: 13px;
+  letter-spacing: 0.01875em;
+  color: #232323;
+  font-weight: 500;
+}
+
+.nameText {
+  font-size: 13px;
+  letter-spacing: 0.01875em;
+  color: #525252;
+  font-weight: 400;
+}
+
+.priceText {
+  font-size: 13px;
+  letter-spacing: 0.01875em;
+  color: #525252;
+  font-weight: 400;
+}
