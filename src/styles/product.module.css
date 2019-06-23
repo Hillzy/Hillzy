@@ -1,0 +1,10 @@
+.container {
+  display: table;
+  text-align: left;
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    text-align: center;
+  }
+}

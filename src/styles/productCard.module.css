@@ -1,16 +1,74 @@
 .container {
-  max-width: 200px;
+  max-width: 210px;
   max-height: 350px;
   width: 100%;
-  height: 100%;
   display: inline-block;
-  margin: 15px 15px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
 .imageContainer {
+  display: block;
   background: #e3e3e3; /** <-- For the demo **/
   width: 100%;
   height: 260px;
+}
+
+@media only screen and (max-width: 1280px) {
+  .container {
+    width: 21%;
+  }
+  .imageContainer {
+    height: 220px;
+  }
+}
+
+@media only screen and (max-width: 1110px) {
+  .container {
+    width: 20.5%;
+  }
+  .imageContainer {
+    height: 200px;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  .container {
+    width: 20%;
+  }
+  .imageContainer {
+    height: 190px;
+  }
+}
+
+@media only screen and (max-width: 960px) {
+  .container {
+    width: 100%;
+  }
+  .imageContainer {
+    height: 260px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 41%;
+  }
+  .imageContainer {
+    height: 250px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .imageContainer {
+    height: 240px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .imageContainer {
+    height: 220px;
+  }
 }
 
 .textContainer {

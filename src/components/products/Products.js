@@ -1,6 +1,8 @@
 import React from "react"
 import ProductCard from "./ProductCard"
 
+import productCSS from "../../styles/product.module.css"
+
 const Products = props => {
   const products = [
     { name: "product", brand: "adidas", price: "$110.00" },
@@ -17,7 +19,7 @@ const Products = props => {
   ]
 
   return (
-    <div>
+    <div className={productCSS.container}>
       {products.map((product, index) => (
         <ProductCard
           key={index}
