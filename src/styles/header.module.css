@@ -49,7 +49,7 @@
 @media only screen and (max-width: 1279px) {
   .midHeader {
     grid-template-columns: auto 100% auto;
-    margin: auto;
+    padding: 0 24px;
   }
 }
 
