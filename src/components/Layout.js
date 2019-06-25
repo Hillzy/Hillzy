@@ -10,6 +10,7 @@ class Layout extends React.Component {
     return (
       <div>
         <Header></Header>
+
         <main className={LayoutCSS.children}>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
