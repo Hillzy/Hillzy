@@ -1,6 +1,6 @@
 import React from "react"
 import headerCSS from "../../styles/header.module.css"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 
 const MidHeader = props => {
@@ -19,7 +19,9 @@ const MidHeader = props => {
     <div className={headerCSS.midHeader}>
       <div className={headerCSS.midContent}>
         <div className={headerCSS.logoContainer}>
-          <Img fluid={data.logoImage.childImageSharp.fluid} alt="Hillzy" />
+          <Link to="/">
+            <Img fluid={data.logoImage.childImageSharp.fluid} alt="Hillzy" />
+          </Link>
         </div>
       </div>
     </div>
