@@ -18,11 +18,24 @@ const MidHeader = props => {
   return (
     <div className={headerCSS.midHeader}>
       <div className={headerCSS.midContent}>
-        <div className={headerCSS.logoContainer}>
-          <Link to="/">
-            <Img fluid={data.logoImage.childImageSharp.fluid} alt="Hillzy" />
-          </Link>
+        <div className={headerCSS.diagonalSep2}>
+          <svg className={headerCSS.svg}>
+            <line x1="0" y1="100%" x2="100%" y2="0" />
+          </svg>
         </div>
+        <div className={headerCSS.logoContainer}>
+          <div className={headerCSS.logoCenter}>
+            <Link to="/">
+              <Img fluid={data.logoImage.childImageSharp.fluid} alt="Hillzy" />
+            </Link>
+          </div>
+        </div>
+        <div className={headerCSS.diagonalSep}>
+          <svg className={headerCSS.svg}>
+            <line x1="0" y1="100%" x2="100%" y2="0" />
+          </svg>
+        </div>
+        <div className={headerCSS.navContainer}></div>
       </div>
     </div>
   )
