@@ -172,7 +172,7 @@
   vertical-align: top;
   font-size: 20px;
   padding-top: 20px;
-  padding-right: 12px;
+  padding-right: 30px;
   float: right;
   width: auto;
   grid-area: midRight;
@@ -189,6 +189,10 @@
 
 .cartContainer {
   display: inline-block;
+  position: absolute;
+}
+
+.cartContainer img {
 }
 
 .userContainer {
