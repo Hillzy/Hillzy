@@ -7,7 +7,7 @@
 .topHeader {
   width: 100%;
   height: 30px;
-  background-color: #141518;
+  background-color: #e0e0e0;
   display: grid;
   grid-template-columns: auto 1280px auto;
   grid-template-areas: ". topContent .";
