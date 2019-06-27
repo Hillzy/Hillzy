@@ -5,7 +5,7 @@ const Nav = () => {
   return (
     <div className={headerCSS.navContainer}>
       <div className={headerCSS.navBtn}>Women</div>
-      <div className={headerCSS.diagonalSep}>
+      <div className={headerCSS.diagonalSep2}>
         <svg className={headerCSS.svg}>
           <line x1="0" y1="100%" x2="100%" y2="0" />
         </svg>

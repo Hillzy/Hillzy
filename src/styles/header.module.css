@@ -57,28 +57,34 @@
 
 .midContent {
   grid-area: midContent;
+  display: grid;
+  grid-template-columns: 0.8fr 175px 4fr auto;
+  grid-template-areas: "midLeft midNav midSearch midRight";
   max-height: 60px;
 }
 
 .logoContainer {
-  width: 129px;
+  width: 120px;
   height: 60px;
   display: inline-block;
   vertical-align: top;
-  padding-top: 16px;
+  padding-top: 18px;
+  grid-area: midLeft;
 }
 
 .diagonalSep {
   display: inline-block;
   width: 30px;
   height: 60px;
-  margin-left: 10px;
+  position: relative;
+  grid-area: midLeft;
+  padding-left: 130px;
 }
 .diagonalSep2 {
   display: inline-block;
   width: 30px;
   height: 60px;
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .svg {
@@ -98,12 +104,13 @@
   font-size: 18px;
   color: #e2e2e2;
   font-weight: 500;
+  grid-area: midNav;
 }
 
 .navBtn {
   display: inline-block;
   vertical-align: top;
-  padding-top: 21px;
+  padding-top: 23px;
   padding-left: 10px;
   text-transform: uppercase;
   cursor: pointer;
@@ -113,9 +120,9 @@
   display: inline-block;
   vertical-align: top;
   padding-top: 14px;
-  margin-left: 40px;
-  width: 40vw;
-  max-width: 700px;
+  margin-left: 30px;
+  margin-right: 30px;
+  grid-area: midSearch;
 }
 
 .NavSearch input {
@@ -133,7 +140,6 @@
 .search {
   padding: 0 30px;
   font-size: 18px;
-  width: 100%;
   height: 32px;
   border-radius: 20px 0 0 20px;
   border: none;
@@ -167,6 +173,12 @@
   padding-top: 20px;
   padding-right: 12px;
   float: right;
+  width: auto;
+  grid-area: midRight;
+}
+
+.rightContainer div {
+  cursor: pointer;
 }
 
 .favouritesContainer {
@@ -200,10 +212,13 @@
   }
 }
 
-@media only screen and (max-width: 1279px) {
+@media only screen and (max-width: 1325px) {
   .midHeader {
-    grid-template-columns: auto 1280px auto;
+    grid-template-columns: auto 100% auto;
     padding: 0 24px;
+  }
+  .midContent {
+    width: calc(100% - 24px);
   }
 }
 
@@ -211,9 +226,6 @@
   .midHeader {
     grid-template-columns: auto 100% auto;
     text-align: center;
-    padding: 0;
-  }
-  .diagonalSep {
-    display: none;
+    padding: 0 15px;
   }
 }
