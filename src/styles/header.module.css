@@ -159,6 +159,30 @@
   background-position: center;
 }
 
+.rightContainer {
+  display: inline-block;
+  color: white;
+  vertical-align: top;
+  font-size: 20px;
+  padding-top: 20px;
+  padding-right: 12px;
+  float: right;
+}
+
+.favouritesContainer {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
+.cartContainer {
+  display: inline-block;
+}
+
+.userContainer {
+  display: inline-block;
+  margin-right: 1.5em;
+}
+
 @media only screen and (max-width: 1279px) {
   .topHeader {
     grid-template-columns: auto 100% auto;

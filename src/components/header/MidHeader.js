@@ -4,6 +4,13 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
 import Nav from "./Nav"
 import NavSearch from "./NavSearch"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faShoppingBag } from "@fortawesome/free-solid-svg-icons"
+import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons"
+
+const cartIcon = <FontAwesomeIcon icon={faShoppingBag} />
+const favouritesIcon = <FontAwesomeIcon icon={faHeart} />
+const userIcon = <FontAwesomeIcon icon={faUser} />
 
 const MidHeader = props => {
   const data = useStaticQuery(graphql`
@@ -34,6 +41,11 @@ const MidHeader = props => {
         </div>
         <Nav></Nav>
         <NavSearch></NavSearch>
+        <div className={headerCSS.rightContainer}>
+          <div className={headerCSS.userContainer}>{userIcon}</div>
+          <div className={headerCSS.favouritesContainer}>{favouritesIcon}</div>
+          <div className={headerCSS.cartContainer}>{cartIcon}</div>
+        </div>
       </div>
     </div>
   )
