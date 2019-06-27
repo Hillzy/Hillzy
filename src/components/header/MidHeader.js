@@ -2,6 +2,8 @@ import React from "react"
 import headerCSS from "../../styles/header.module.css"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
+import Nav from "./Nav"
+import NavSearch from "./NavSearch"
 
 const MidHeader = props => {
   const data = useStaticQuery(graphql`
@@ -30,7 +32,8 @@ const MidHeader = props => {
             <line x1="0" y1="100%" x2="100%" y2="0" />
           </svg>
         </div>
-        <div className={headerCSS.navContainer}></div>
+        <Nav></Nav>
+        <NavSearch></NavSearch>
       </div>
     </div>
   )

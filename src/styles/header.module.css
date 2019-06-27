@@ -92,6 +92,72 @@
   stroke-width: 2;
 }
 
+.navContainer {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 18px;
+  color: #e2e2e2;
+  font-weight: 500;
+}
+
+.navBtn {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 21px;
+  padding-left: 10px;
+  text-transform: uppercase;
+}
+
+.NavSearch {
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 14px;
+  margin-left: 40px;
+  width: 40vw;
+  max-width: 700px;
+}
+
+.NavSearch input {
+  box-sizing: border-box;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+.searchWrapper {
+  text-align: center;
+  height: 32px;
+  font-size: 0;
+}
+
+.search {
+  padding: 0 30px;
+  font-size: 18px;
+  width: 100%;
+  height: 32px;
+  border-radius: 20px 0 0 20px;
+  border: none;
+  width: 92%;
+}
+
+.search:focus {
+  border-color: #00a2ff;
+  border-width: 2px;
+  border-style: solid;
+}
+
+.searchSubmit {
+  cursor: pointer;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  display: inline-block;
+  height: 32px;
+  width: 8%;
+  background: url("../assets/images/search-icon.png") 0 0 no-repeat;
+  background-size: 18px 18px;
+  background-color: white;
+  background-position: center;
+}
+
 @media only screen and (max-width: 1279px) {
   .topHeader {
     grid-template-columns: auto 100% auto;
