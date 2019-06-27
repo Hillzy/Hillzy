@@ -5,17 +5,17 @@ import productCSS from "../../styles/product.module.css"
 
 const Products = props => {
   const products = [
-    { name: "product", brand: "adidas", price: "$110.00" },
-    { name: "product", brand: "adidas", price: "$110.00" },
-    { name: "product", brand: "adidas", price: "$110.00" },
-    { name: "product", brand: "adidas", price: "$110.00" },
-    { name: "product", brand: "adidas", price: "$110.00" },
-    { name: "product", brand: "adidas", price: "$110.00" },
-    { name: "product", brand: "adidas", price: "$110.00" },
-    { name: "product", brand: "adidas", price: "$110.00" },
-    { name: "product", brand: "adidas", price: "$110.00" },
-    { name: "product", brand: "adidas", price: "$110.00" },
-    { name: "product", brand: "adidas", price: "$110.00" },
+    { name: "product", brand: "brand", price: "$110.00" },
+    { name: "product", brand: "brand", price: "$110.00" },
+    { name: "product", brand: "brand", price: "$110.00" },
+    { name: "product", brand: "brand", price: "$110.00" },
+    { name: "product", brand: "brand", price: "$110.00" },
+    { name: "product", brand: "brand", price: "$110.00" },
+    { name: "product", brand: "brand", price: "$110.00" },
+    { name: "product", brand: "brand", price: "$110.00" },
+    { name: "product", brand: "brand", price: "$110.00" },
+    { name: "product", brand: "brand", price: "$110.00" },
+    { name: "product", brand: "brand", price: "$110.00" },
   ]
 
   return (
