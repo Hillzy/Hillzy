@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import headerCSS from "../../styles/header.module.css"
 import { useStaticQuery, graphql, Link } from "gatsby"
 import Img from "gatsby-image"
@@ -26,12 +26,18 @@ const MidHeader = props => {
     }
   `)
 
-  let accountLink
+  const [accountLink, setLink] = useState(undefined)
 
-  if (localStorage.getItem("token")) {
-    accountLink = <Link to="/myaccount/">{userIcon}</Link>
+  let accLink
+
+  useEffect(() => {
+    setLink(localStorage.getItem("token"))
+  }, [])
+
+  if (accountLink) {
+    accLink = <Link to="/myaccount/">{userIcon}</Link>
   } else {
-    accountLink = <Link to="/login/">{userIcon}</Link>
+    accLink = <Link to="/login/">{userIcon}</Link>
   }
 
   return (
@@ -52,7 +58,7 @@ const MidHeader = props => {
         <Nav></Nav>
         <NavSearch></NavSearch>
         <div className={headerCSS.rightContainer}>
-          <div className={headerCSS.userContainer}>{accountLink}</div>
+          <div className={headerCSS.userContainer}>{accLink}</div>
           <div className={headerCSS.favouritesContainer}>{favouritesIcon}</div>
           <div className={headerCSS.cartContainer}>
             <img src={cartIcon} alt="bag" />
