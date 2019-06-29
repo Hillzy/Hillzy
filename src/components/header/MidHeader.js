@@ -5,7 +5,6 @@ import Img from "gatsby-image"
 import Nav from "./Nav"
 import NavSearch from "./NavSearch"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faShoppingBag } from "@fortawesome/free-solid-svg-icons"
 import { faUser, faHeart } from "@fortawesome/free-regular-svg-icons"
 
 import cartIcon from "../../assets/images/shopping-bag.svg"
@@ -44,7 +43,9 @@ const MidHeader = props => {
         <Nav></Nav>
         <NavSearch></NavSearch>
         <div className={headerCSS.rightContainer}>
-          <div className={headerCSS.userContainer}>{userIcon}</div>
+          <div className={headerCSS.userContainer}>
+            <Link to="/login/">{userIcon}</Link>
+          </div>
           <div className={headerCSS.favouritesContainer}>{favouritesIcon}</div>
           <div className={headerCSS.cartContainer}>
             <img src={cartIcon} alt="bag" />

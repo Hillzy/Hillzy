@@ -181,6 +181,9 @@
 .rightContainer div {
   cursor: pointer;
 }
+.rightContainer a {
+  color: white;
+}
 
 .favouritesContainer {
   display: inline-block;
