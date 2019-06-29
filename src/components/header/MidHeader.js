@@ -25,6 +25,15 @@ const MidHeader = props => {
       }
     }
   `)
+
+  let accountLink
+
+  if (localStorage.getItem("token")) {
+    accountLink = <Link to="/myaccount/">{userIcon}</Link>
+  } else {
+    accountLink = <Link to="/login/">{userIcon}</Link>
+  }
+
   return (
     <div className={headerCSS.midHeader}>
       <div className={headerCSS.midContent}>
@@ -43,9 +52,7 @@ const MidHeader = props => {
         <Nav></Nav>
         <NavSearch></NavSearch>
         <div className={headerCSS.rightContainer}>
-          <div className={headerCSS.userContainer}>
-            <Link to="/login/">{userIcon}</Link>
-          </div>
+          <div className={headerCSS.userContainer}>{accountLink}</div>
           <div className={headerCSS.favouritesContainer}>{favouritesIcon}</div>
           <div className={headerCSS.cartContainer}>
             <img src={cartIcon} alt="bag" />

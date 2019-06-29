@@ -53,6 +53,10 @@ class Login extends React.Component {
           this.setState({ error: err.response.data.message, loading: false })
         })
     })
+
+    if (localStorage.getItem("token")) {
+      navigate("/myaccount/", this.state.userEmail)
+    }
   }
 
   handleOnChange = event => {
@@ -61,37 +65,33 @@ class Login extends React.Component {
 
   render() {
     const { username, password, loggedIn } = this.state
-    if (loggedIn || localStorage.getItem("token")) {
-      return navigate("/myaccount", { state: this.state })
-    } else {
-      return (
-        <Layout>
-          <form onSubmit={this.onFormSubmit}>
-            <label>
-              Username:
-              <input
-                type="text"
-                name="username"
-                value={username}
-                onChange={this.handleOnChange}
-              />
-            </label>
-            <br />
-            <label>
-              Password:
-              <input
-                type="password"
-                name="password"
-                value={password}
-                onChange={this.handleOnChange}
-              />
-            </label>
-            <br />
-            <button type="submit">Login</button>
-          </form>
-        </Layout>
-      )
-    }
+    return (
+      <Layout>
+        <form onSubmit={this.onFormSubmit}>
+          <label>
+            Username:
+            <input
+              type="text"
+              name="username"
+              value={username}
+              onChange={this.handleOnChange}
+            />
+          </label>
+          <br />
+          <label>
+            Password:
+            <input
+              type="password"
+              name="password"
+              value={password}
+              onChange={this.handleOnChange}
+            />
+          </label>
+          <br />
+          <button type="submit">Login</button>
+        </form>
+      </Layout>
+    )
   }
 }
 export default Login
