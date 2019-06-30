@@ -8,13 +8,17 @@
   width: 100%;
   height: 30px;
   background-color: #d6d6d6;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto 1280px auto;
   grid-template-columns: auto 1280px auto;
   grid-template-areas: ". topContent .";
   text-align: right;
 }
 
 .topContent {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: topContent;
   margin: auto 0;
 }
@@ -30,7 +34,9 @@
   width: 100%;
   height: 60px;
   background-color: #1d1e22;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto 1280px auto;
   grid-template-columns: auto 1280px auto;
   grid-template-areas: ". midContent .";
 }
@@ -39,12 +45,16 @@
   width: 100%;
   height: 40px;
   background-color: #00a2ff;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: auto 1280px auto;
   grid-template-columns: auto 1280px auto;
   grid-template-areas: ". botContent .";
 }
 
 .botContent {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: botContent;
   margin: auto;
 }
@@ -56,14 +66,20 @@
 }
 
 .midContent {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   grid-area: midContent;
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 0.8fr 175px 4fr auto;
   grid-template-columns: 0.8fr 175px 4fr auto;
   grid-template-areas: "midLeft midNav midSearch midRight";
   max-height: 60px;
 }
 
 .logoContainer {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   width: 120px;
   height: 60px;
   display: inline-block;
@@ -74,6 +90,8 @@
 }
 
 .diagonalSep {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   display: inline-block;
   width: 30px;
   height: 60px;
@@ -100,6 +118,8 @@
 }
 
 .navContainer {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
   display: inline-block;
   vertical-align: top;
   font-size: 18px;
@@ -118,6 +138,8 @@
 }
 
 .NavSearch {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
   display: inline-block;
   vertical-align: top;
   padding-top: 14px;
@@ -127,6 +149,7 @@
 }
 
 .NavSearch input {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   font-size: 13px;
   vertical-align: top;
@@ -167,6 +190,8 @@
 }
 
 .rightContainer {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
   display: inline-block;
   color: white;
   vertical-align: top;
@@ -205,6 +230,7 @@
 
 @media only screen and (max-width: 1279px) {
   .topHeader {
+    -ms-grid-columns: auto 100% auto;
     grid-template-columns: auto 100% auto;
   }
 }
@@ -216,12 +242,14 @@
 
 @media only screen and (max-width: 1279px) {
   .botHeader {
+    -ms-grid-columns: auto 100% auto;
     grid-template-columns: auto 100% auto;
   }
 }
 
 @media only screen and (max-width: 1325px) {
   .midHeader {
+    -ms-grid-columns: auto 100% auto;
     grid-template-columns: auto 100% auto;
     padding: 0 24px;
   }
@@ -232,6 +260,7 @@
 
 @media only screen and (max-width: 959px) {
   .midHeader {
+    -ms-grid-columns: auto 100% auto;
     grid-template-columns: auto 100% auto;
     text-align: center;
     padding: 0 15px;
